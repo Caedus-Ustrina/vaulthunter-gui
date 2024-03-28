@@ -28,7 +28,7 @@ export const TalentInterface = (props) => {
 
 const Talents = (props) => {
     return talents.tree.skills.map(talent => {
-        return talent.type == "grouped" ? null :
+        return talent.type === "grouped" ? null :
         <TalentComponent talent = {talent}
          handleTotalLevel = {props.handleTotalLevel} 
          key={talent.id}
